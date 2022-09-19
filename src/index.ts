@@ -8,14 +8,14 @@
  */
 
 import promptSync from "prompt-sync";
-  const prompt = promptSync();
-  console.log("Game of rock paper scissors against a robot");
-  const gameString = prompt(
-    "(Rock = 1, Paper = 2, Scissor = 3) Please pick number from 1-3 :  "
-  );
-  const rock = 1
-  const paper = 2
-  const scissor = 3
+const prompt = promptSync();
+console.log("Game of rock paper scissors against a robot");
+const gameString = prompt(
+  "(Rock = 1, Paper = 2, Scissor = 3) Please pick number from 1-3 :  "
+);
+const rock = 1;
+const paper = 2;
+const scissor = 3;
 try {
   const game = parseFloat(gameString);
   if (isNaN(game)) {

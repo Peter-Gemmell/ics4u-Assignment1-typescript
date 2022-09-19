@@ -8,12 +8,15 @@
  */
 
 import promptSync from "prompt-sync";
-try {
   const prompt = promptSync();
   console.log("Game of rock paper scissors against a robot");
   const gameString = prompt(
     "(Rock = 1, Paper = 2, Scissor = 3) Please pick number from 1-3 :  "
   );
+  const rock = 1
+  const paper = 2
+  const scissor = 3
+try {
   const game = parseFloat(gameString);
   if (isNaN(game)) {
     throw new Error("not a number");
@@ -34,9 +37,9 @@ try {
   if (robot === game) {
     console.log("It was a tie!");
   } else if (
-    (robot === 2 && game === 1) ||
-    (robot === 3 && game === 2) ||
-    (robot === 1 && game === 3)
+    (robot === paper && game === rock) ||
+    (robot === scissor && game === paper) ||
+    (robot === rock && game === scissor)
   ) {
     console.log("A.I wins!");
   } else {
